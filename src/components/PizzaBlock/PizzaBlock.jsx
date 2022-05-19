@@ -26,6 +26,7 @@ function PizzaBlock({ title, price, imageUrl, sizes, types, id }) {
         <ul>
           {sizes.map((sizes, i) => (
             <li
+              key={i}
               onClick={() => {
                 setActiveSize(i);
               }}

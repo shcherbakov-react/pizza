@@ -8,7 +8,14 @@ import PizzaBlock from './components/PizzaBlock/PizzaBlock';
 import pizzas from './assets/pizza.json';
 
 function App() {
-  console.log(pizzas);
+  fetch('https://6285da2396bccbf32d6970e2.mockapi.io/items')
+    .then((res) => {
+      return res.json;
+    })
+    .then((json) => {
+      console.log('массив пицц' + json);
+    });
+
   return (
     <div className="wrapper">
       <Header />
