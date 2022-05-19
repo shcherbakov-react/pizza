@@ -1,14 +1,10 @@
 import React from 'react';
 
-function PizzaBlock({ title, price, imageUrl, sizes, types }) {
+function PizzaBlock({ title, price, imageUrl, sizes, types, id }) {
   const [activeType, setActiveType] = React.useState(0);
   const [activeSize, setActiveSize] = React.useState(0);
   const [pizzaCount, setPizzaCount] = React.useState(0);
   const typeNames = ['Тонкое', 'Традиционное'];
-
-  const onClickTypes = (index) => {
-    setActiveType(index);
-  };
 
   return (
     <div className="pizza-block">
@@ -18,6 +14,7 @@ function PizzaBlock({ title, price, imageUrl, sizes, types }) {
         <ul>
           {types.map((typeId) => (
             <li
+              key={typeId}
               onClick={() => {
                 setActiveType(typeId);
               }}

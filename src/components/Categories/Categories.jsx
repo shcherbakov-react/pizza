@@ -1,4 +1,3 @@
-import { buildTimeValue } from '@testing-library/user-event/dist/utils';
 import React from 'react';
 
 function Categories() {
@@ -13,7 +12,10 @@ function Categories() {
     <div className="categories">
       <ul>
         {categories.map((value, i) => (
-          <li onClick={() => onClickCategory(i)} className={activeCategory === i ? 'active' : ''}>
+          <li
+            key={i}
+            onClick={() => onClickCategory(i)}
+            className={activeCategory === i ? 'active' : ''}>
             {value}
           </li>
         ))}
