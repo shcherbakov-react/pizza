@@ -6,6 +6,7 @@ import Home from '../src/pages/Home';
 
 // import pizzas from './assets/pizza.json';
 import React from 'react';
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
 
 function App() {
   return (
@@ -13,7 +14,7 @@ function App() {
       <Header />
       <div className="content">
         <div className="container">
-          <Home />
+          <Routes></Routes>
         </div>
       </div>
     </div>
